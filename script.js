@@ -44,7 +44,9 @@ function removeMe() {
   // $('.harmonica-item').remove();
 }
 
-function whenIAddAHarmonica() {
+function whenIAddAHarmonica(event) {
+  event.preventDefault();
+
   //stuff to do when we add harmonica
   console.log('clicked the button');
 
