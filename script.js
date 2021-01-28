@@ -7,4 +7,8 @@ function onReady() {
 
   const h1 = $('h1');
   console.log('h1', h1);
+
+  const h2 = 'h2';
+  // make it blue
+  $(h2).css('background-color', 'blue');
 }
