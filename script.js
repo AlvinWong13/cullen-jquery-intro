@@ -25,4 +25,11 @@ function onReady() {
 
   const louderText = h1Text.toUpperCase() + '!!!!';
   $('h1').text(louderText);
+
+  $('#submitButton').on('click', whenIAddAHarmonica);
+}
+
+function whenIAddAHarmonica() {
+  //stuff to do when we add harmonica
+  console.log('clicked the button');
 }
