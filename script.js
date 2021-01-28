@@ -45,6 +45,7 @@ function removeMe() {
 }
 
 function whenIAddAHarmonica(event) {
+  // Do not reload the page on form submit
   event.preventDefault();
 
   //stuff to do when we add harmonica
