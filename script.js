@@ -27,13 +27,21 @@ function onReady() {
   $('h1').text(louderText);
 
   $('#submitButton').on('click', whenIAddAHarmonica);
-  $('.removeButton').on('click', removeMe);
+  //$('.removeButton').on('click', removeMe); //does not work
+
+  //event delegation
   $(document).on('click', '.removeButton', removeMe);
   console.log('removeButton', $('.removeButton'));
 }
 
 function removeMe() {
-  console.log('remove me!');
+  let thisThing = $(this);
+  console.log('what is this?!', thisThing);
+
+  $(this).remove();
+
+  // console.log('remove me!');
+  // $('.harmonica-item').remove();
 }
 
 function whenIAddAHarmonica() {
@@ -46,7 +54,7 @@ function whenIAddAHarmonica() {
 
   //render data to DOM
   $('#harmonicas').append(`
-  <li>
+  <li class="harmonica-item">
     Brand is: ${brand}
     <button class="removeButton">Remove</button>
   </li>
