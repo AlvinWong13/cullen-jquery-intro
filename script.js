@@ -36,9 +36,9 @@ function onReady() {
 
 function removeMe() {
   let thisThing = $(this);
-  console.log('what is this?!', thisThing);
+  //console.log('what is this?!', thisThing);
 
-  $(this).remove();
+  $(this).parent().remove();
 
   // console.log('remove me!');
   // $('.harmonica-item').remove();
