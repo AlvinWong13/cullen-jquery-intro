@@ -27,6 +27,13 @@ function onReady() {
   $('h1').text(louderText);
 
   $('#submitButton').on('click', whenIAddAHarmonica);
+  $('.removeButton').on('click', removeMe);
+  $(document).on('click', '.removeButton', removeMe);
+  console.log('removeButton', $('.removeButton'));
+}
+
+function removeMe() {
+  console.log('remove me!');
 }
 
 function whenIAddAHarmonica() {
@@ -41,6 +48,7 @@ function whenIAddAHarmonica() {
   $('#harmonicas').append(`
   <li>
     Brand is: ${brand}
+    <button class="removeButton">Remove</button>
   </li>
   `);
 }
