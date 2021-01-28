@@ -36,4 +36,11 @@ function whenIAddAHarmonica() {
   //grab the data
   let brand = $('#brand').val();
   console.log('brand is', brand);
+
+  //render data to DOM
+  $('#harmonicas').append(`
+  <li>
+    Brand is: ${brand}
+  </li>
+  `);
 }
