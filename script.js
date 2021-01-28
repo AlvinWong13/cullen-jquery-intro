@@ -32,4 +32,8 @@ function onReady() {
 function whenIAddAHarmonica() {
   //stuff to do when we add harmonica
   console.log('clicked the button');
+
+  //grab the data
+  let brand = $('#brand').val();
+  console.log('brand is', brand);
 }
